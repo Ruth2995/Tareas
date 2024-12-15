@@ -44,15 +44,15 @@ function agregarTarea(tarea, id, hecho, eliminar){
     const elemento = `<li id="elemento">
         <i id="${id}" data="hecho" class="bi ${realizado}"></i>
             <p class="tarea-lista text ${LINE}">${tarea}</p>
-            <i id=${id} data="eliminar" class="bi bi-x-circle"></i>
+            <i id="${id}" data="eliminar" class="bi bi-x-circle"></i>
         </li>`
     lista.insertAdjacentHTML("beforeend", elemento);
 };
 
-function tareaRealizada(elemento) {
-    element.classlist.toggle(check);
-    element.classlist.toggle(uncheck);
-    element.parentNode.querySelector('.text').classlist.toggle(tachado);
+function tareaRealizada(element) {
+    element.classList.toggle(check);
+    element.classList.toggle(uncheck);
+    element.parentNode.querySelector('.text').classList.toggle(tachado);
     LIST[element.id].realizado= LIST[element.id].realizado ? false:true;
 }
 function tareaEliminado(element) {
